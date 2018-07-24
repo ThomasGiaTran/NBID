@@ -1,0 +1,622 @@
+﻿@model NBID.Models.HomeViewModels
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<!--------------------------------------------ACIS - Municipal Services (Historical)-------------------------------------------->
+@if (Model.Dmode == "ACIS_Historical")
+{
+    <h1>UTILITY BILLING - COMPLUS</h1>
+    <div class="row">
+        <div class="col-xs-4">Cust. #:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Cust. Serial:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Status:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Cust. Name:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">S Addr1:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">S City, St, Zip:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.f, &nbsp; @Model.Details_ACIS_Historical.g &nbsp; @Model.Details_ACIS_Historical.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr1:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr2:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr3:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B City, St, Zip:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.l, &nbsp; @Model.Details_ACIS_Historical.m &nbsp; @Model.Details_ACIS_Historical.n</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Email:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.o</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Mail Code:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.p</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Phone:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.q</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">SSN:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.r</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">DLN:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.s</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Cycle:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.t</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Own Flag:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.u</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Tax X:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.v</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Pentalty X:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.w</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Discon X:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.x</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">user1:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.y</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">user2:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.z</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">user3:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.aa</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">user4:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.bb</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Munic:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.cc</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Credit:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.dd</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Balance:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.ee</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Period:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.ff</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">House #:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.gg</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Street:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.hh</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Street cd:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.ii</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">From Date:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.jj</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">To Date:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.kk</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Prop Owner:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.ll</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Addr1:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.mm</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Addr2:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.nn</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City, State, Zip:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.oo, &nbsp; @Model.Details_ACIS_Historical.pp &nbsp; @Model.Details_ACIS_Historical.qq</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Parcel ID:</div>
+        <div class="col-xs-8">@Model.Details_ACIS_Historical.rr</div>
+    </div>
+}
+<!--------------------------------------------ALARM BILLING-------------------------------------------->
+@if (Model.Dmode == "Alarm_Billing")
+{
+    <h1>ALARM BILLING</h1>
+    <div class="row">
+        <div class="col-xs-4">Account #:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Account Type:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Status:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Cust. Name:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">S Addr1:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">S City, St, Zip:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.f, &nbsp; @Model.Details_Alarm_Billing.g &nbsp; @Model.Details_Alarm_Billing.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr1:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr2:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr3:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B City, St, Zip:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.l, &nbsp; @Model.Details_Alarm_Billing.m &nbsp; @Model.Details_Alarm_Billing.n</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Home Phone:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.o</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Parcel ID:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.p</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Balance:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.q</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Prop Owner:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.r</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Addr1:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.s</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Addr2:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.t</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City, State  Zip:</div>
+        <div class="col-xs-8">@Model.Details_Alarm_Billing.u, &nbsp; @Model.Details_Alarm_Billing.v &nbsp; @Model.Details_Alarm_Billing.w</div>
+    </div>
+}
+<!--------------------------------------------BUSINESS LICENSE-------------------------------------------->
+@if (Model.Dmode == "Business_License")
+{
+    <h1>BUSINESS LICENSE - COMPLUS</h1>
+    <div class="row">
+        <div class="col-xs-4">Acct. Type:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">License #:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Category:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Bus. ID:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Name:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Owner Name:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.f</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Owner Phone:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.g</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Owner Type:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Exp. Date:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">S Addy:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City, St, Zip:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr1:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.l</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr2:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.m</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Addr3:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.n</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">B Zip:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.o</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Phone:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.p</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">FEIN:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.q</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">SEIN:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.r</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Established:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.s</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">SIC:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.t</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4"># of Emps:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.u</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr1:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.v</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr2:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.w</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr3:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.x</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr4:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.y</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr5:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.z</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr6:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.aa</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">usr7:</div>
+        <div class="col-xs-8">@Model.Details_Business_License.bb</div>
+    </div>
+}
+<!--------------------------------------------LEADS-------------------------------------------->
+@if (Model.Dmode == "LEADS")
+{
+    <h1>LEADS - PERMITS PLUS</h1>
+    <div class="row">
+        <div class="col-xs-4">Lead #:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Tax ID:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Status:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Bus. Name:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Contact:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Address:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.f</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City, S, Zip:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.g</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">License No:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">DOK:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Entered:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Est. Tax:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Est. Penalties:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.l</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Balance:</div>
+        <div class="col-xs-8">@Model.Details_LEADS.m</div>
+    </div>
+}
+<!--------------------------------------------UB MUNIS-------------------------------------------->
+@if (Model.Dmode == "UB_MUNIS")
+{
+    <h1>Utility Billing (Munis)</h1>
+    <div class="row">
+        <div class="col-xs-4">Account #:</div>
+        <div class="col-xs-8">@Model.Details_UB.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Account Start Date:</div>
+        <div class="col-xs-8">@Model.Details_UB.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Account Stop Date:</div>
+        <div class="col-xs-8">@Model.Details_UB.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Relation:</div>
+        <div class="col-xs-8">@Model.Details_UB.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Billable Customer:</div>
+        <div class="col-xs-8">@Model.Details_UB.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Customer Start Date:</div>
+        <div class="col-xs-8">@Model.Details_UB.f</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Customer Stop Date:</div>
+        <div class="col-xs-8">@Model.Details_UB.g</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Customer ID:</div>
+        <div class="col-xs-8">@Model.Details_UB.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Customer Name:</div>
+        <div class="col-xs-8">@Model.Details_UB.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Premise Phone #:</div>
+        <div class="col-xs-8">@Model.Details_UB.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Address:</div>
+        <div class="col-xs-8">@Model.Details_UB.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City, State Zip</div>
+        <div class="col-xs-8">@Model.Details_UB.l, @Model.Details_UB.m @Model.Details_UB.n</div>
+    </div>
+}
+<!--------------------------------------------VENDORS MUNIS-------------------------------------------->
+@if (Model.Dmode == "Vendors_MUNIS")
+{
+    <h1>AP VENDORS - MUNIS</h1>
+    <div class="row">
+        <div class="col-xs-4">Vendor:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Entity:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Alpha:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Type:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Status:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Reason:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.f</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Company Name 1:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.g</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Company Name 2:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">DBA:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Address 1:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Address 2:</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Zip Code</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.l</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.m</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">State</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.n</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Email</div>
+        <div class="col-xs-8">@Model.Details_MUNIS_VENDORS.o</div>
+    </div>
+}
+<!--------------------------------------------GENERAL BILLING MUNIS-------------------------------------------->
+@if (Model.Dmode == "GB_MUNIS")
+{
+    <h1>GENERAL BILLING - MUNIS</h1>
+    <div class="row">
+        <div class="col-xs-4">Customer:</div>
+        <div class="col-xs-8">@Model.Details_GB.a</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">AR code:</div>
+        <div class="col-xs-8">@Model.Details_GB.b</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Invoice:</div>
+        <div class="col-xs-8">@Model.Details_GB.c</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Invoice date:</div>
+        <div class="col-xs-8">@Model.Details_GB.d</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Batch #:</div>
+        <div class="col-xs-8">@Model.Details_GB.e</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Clerk:</div>
+        <div class="col-xs-8">@Model.Details_GB.f</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Customer PO:</div>
+        <div class="col-xs-8">@Model.Details_GB.g</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Unpaid balance:</div>
+        <div class="col-xs-8">@Model.Details_GB.h</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Discount %:</div>
+        <div class="col-xs-8">@Model.Details_GB.i</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Department:</div>
+        <div class="col-xs-8">@Model.Details_GB.j</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Parcel:</div>
+        <div class="col-xs-8">@Model.Details_GB.k</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Contract:</div>
+        <div class="col-xs-8">@Model.Details_GB.l</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">For/loc:</div>
+        <div class="col-xs-8">@Model.Details_GB.m</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Name1:</div>
+        <div class="col-xs-8">@Model.Details_GB.n</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Name2:</div>
+        <div class="col-xs-8">@Model.Details_GB.o</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Address:</div>
+        <div class="col-xs-8">@Model.Details_GB.p</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">City:</div>
+        <div class="col-xs-8">@Model.Details_GB.q</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">State:</div>
+        <div class="col-xs-8">@Model.Details_GB.r</div>
+    </div>
+    <div class="row">
+        <div class="col-xs-4">Zip:</div>
+        <div class="col-xs-8">@Model.Details_GB.s</div>
+    </div>
+}
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    $('h1').css('color', 'red');
+    $('.col-xs-4').css({ 'color': 'black', 'font-weight': 'bold', 'text-align': 'right' });
+    $('.col-xs-8').css('color', 'blue');
+</script>

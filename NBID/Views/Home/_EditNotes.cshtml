@@ -1,0 +1,83 @@
+﻿@model NBID.Models.HomeViewModels
+
+@{
+    ViewBag.Title = "Note";
+}
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+<h2 class="text-center">Edit Note</h2>
+
+@if (Model.SuccessMessage)
+{
+    <div class="alert alert-success">
+        Note Deleted!
+    </div>
+}
+
+@if (!Model.SuccessMessage)
+{
+    using (Html.BeginForm())
+    {
+        <div class="panel panel-primary">
+            <!--========================HIDDEN FIELDS BEGIN========================-->
+            @Html.HiddenFor(m => m.notes.note_id)
+            @*@Html.HiddenFor(m => m.notes.nbid, new { Value = Model.queryID })*@
+            @Html.HiddenFor(m => m.notes.date_time, new { Value = DateTime.Now })
+            @Html.HiddenFor(m => m.notes.user_id, new { Value = 20136 })
+            <!--========================HIDDEN FIELDS END========================-->
+            <div class="panel-body">
+                <div class="row" style="margin-left:1em; margin-right:1em;">
+                    <div class="col-sm-3">
+                        NBID: @Model.notes.nbid
+                    </div>
+                    <div class="col-sm-4">
+                        Date: @DateTime.Now.ToString("yyyy-MM-dd")
+                    </div>
+                    <div class="col-sm-5">
+                        By: @ViewBag.name
+                    </div>
+                </div>
+                <hr />
+                <div class="row" style="margin-left:1em; margin-right:1em;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-1">@Html.RadioButtonFor(m => Model.notes.icon, "note.gif")</div>
+                    <div class="col-sm-1"><img src="~/Content/Icons/note.gif" /></div>
+                    <div class="col-sm-1">@Html.RadioButtonFor(m => Model.notes.icon, "star.gif")</div>
+                    <div class="col-sm-1"><img src="~/Content/Icons/star.gif" /></div>
+                    <div class="col-sm-1">@Html.RadioButtonFor(m => Model.notes.icon, "angry.gif")</div>
+                    <div class="col-sm-1"><img src="~/Content/Icons/angry.gif" /></div>
+                    <div class="col-sm-1">@Html.RadioButtonFor(m => Model.notes.icon, "important.gif")</div>
+                    <div class="col-sm-1"><img src="~/Content/Icons/important.gif" /></div>
+                </div>
+            </div>
+            <div class="row" style="margin-left:1em; margin-right:1em;">
+                <div class="col-sm-2">
+                    Subject:
+                </div>
+                <div class="col-sm-10">
+                    @Html.TextBoxFor(m => m.notes.subject, new { style = "width:100%;" })
+                </div>
+            </div>
+            <hr />
+            <div class="row" style="margin-left:1em; margin-right:1em; margin-bottom:1em;">
+                <div class="col-sm-2">
+                    Comment:
+                </div>
+                <div class="col-sm-10">
+                    @Html.TextAreaFor(m => m.notes.comment, new { style = "height:140px;width:100%;" })
+                </div>
+            </div>
+            <div class="panel-footer text-right" style="margin-right:1em">
+                <button name="Command" value="Delete" class="btn btn-md btn-danger" onclick="return confirm('Sure to delete this note?')">
+                    <i class="glyphicon glyphicon-remove-sign"></i> Delete
+                </button>
+                <button name="Command" value="Edit" class="btn btn-md btn-primary">
+                    <i class="glyphicon glyphicon-floppy-save"></i>Edit
+                </button>
+            </div>
+        </div>
+    }
+}
+

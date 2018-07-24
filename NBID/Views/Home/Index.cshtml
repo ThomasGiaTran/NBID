@@ -1,0 +1,247 @@
+﻿@model NBID.Models.HomeViewModels
+
+
+@{
+    ViewBag.Title = "NBID";
+}
+
+<!--========================MERGE MODAL========================-->
+<div class="modal fade" id="mergeModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h3 class="modal-title text-center">Merge</h3>
+            </div>
+            <div class="modal-body" id="mergeModalDiv">
+                <div class="row text-center">
+                    <h4>Please enter NBID's in the boxes below to merge</h4>
+                </div>
+                <div>
+                    <input class="form-control" id="nbid1" name="id1" placeholder="NBID #1" type="number" />
+                </div>
+                <div>
+                    <input class="form-control" id="nbid2" name="id2" placeholder="NBID #2" type="number" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" data-dismiss="modal">
+                    <i class="glyphicon glyphicon-ban-circle"></i> Cancel
+                </button>
+                <button id="btnSave" class="btn btn-warning">
+                    <i class="glyphicon glyphicon-warning-sign"></i> Merge
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button class="btn btn-primary" href="#" onclick="window.open('@Url.Action("Get_NewNBID", "Home")',
+                                                                                            '_blank', 'width=550,height=400,top=20,right=50' )">
+    New NBID
+</button>
+
+<!--========================SEARCH AREA BEGIN========================-->
+<form id="searchform">
+    <div class="panel panel-primary">
+        <div class="panel-body">
+            <div class="row text-center">
+                <div class="col-xs-2"><b>NBID:</b></div>
+                <div class="col-xs-2"><b>Account #:</b></div>
+                <div class="col-xs-3"><b>Name:</b></div>
+                <div class="col-xs-3"><b>Address:</b></div>
+                <div class="col-xs-2"><b>Phone #:</b></div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2">
+                    @Html.TextBoxFor(m => m.SearchNBID, new { @class = "form-control" })
+                </div>
+                <div class="col-xs-2">
+                    @Html.TextBoxFor(m => m.SearchAccount, new { @class = "form-control" })
+                </div>
+                <div class="col-xs-3">
+                    @Html.TextBoxFor(m => m.SearchName, new { @class = "form-control" })
+                </div>
+                <div class="col-xs-3">
+                    @Html.TextBoxFor(m => m.SearchAddress, new { @class = "form-control" })
+                </div>
+                <div class="col-xs-2">
+                    @Html.TextBoxFor(m => m.SearchPhone, new { @class = "form-control" })
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="pull-right">
+                        <button id="btnSearch" class="btn btn-primary">
+                            <i class="glyphicon glyphicon-search"></i> Search
+                        </button>
+                        <button id="btnClear" class="btn btn-info">
+                            <i class="glyphicon glyphicon-refresh"></i> Clear
+                        </button>
+                    </div>
+                    <div class="pull-left">
+                        @if (User.IsInRole("ADMIN") | User.IsInRole("NBID(RW)"))
+                        {
+                            <button class="btn btn-warning" data-toggle="modal" data-target="#mergeModal">
+                                <i class="glyphicon glyphicon-warning-sign"></i> Merge
+                            </button>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<!--========================SEARCH AREA END========================-->
+
+<!--========================QUERY AREA BEGIN========================-->
+<div id="searchResultsArea">
+</div>
+<!--========================QUERY AREA END========================-->
+
+
+<!--========================RESULTS AREA BEGIN========================-->
+<div id="resultsArea">
+</div>
+<!--========================RESULTS AREA END========================-->
+
+<div id="loadingGIF" style="text-align:center; display:none">
+    <img src="~/Content/InternetSlowdown_Day.gif" width="150" />
+</div>
+
+@section scripts
+{
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+<script type="text/javascript" src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(function () {
+
+            //click search button function
+            $('#btnSearch').on('click', function (e) {
+                e.preventDefault();
+
+                var vm = $('#searchform').serialize();
+
+                $('#searchResultsArea').hide();
+                $('#resultsArea').hide();
+                $('#loadingGIF').show();
+
+                $.ajax({
+                    url: '@Url.Action("SearchResults", "Home")',
+                    type: "POST",
+                    cache: false,
+                    data: vm,
+                    success: function (data) {
+                        //alert("success");
+                        $('#loadingGIF').hide();
+                        $('#searchResultsArea').html(data);
+                        $('#dtable').DataTable();
+                        $('#searchResultsArea').show();
+                    }
+                });
+            });
+
+            //clear button function
+            $('#btnClear').on('click', function (e) {
+                e.preventDefault();
+
+                $('#searchResultsArea').show();
+                $('#resultsArea').show();
+
+                $('#SearchNBID').val("");
+                $('#SearchAccount').val("");
+                $('#SearchName').val("");
+                $('#SearchAddress').val("");
+                $('#SearchPhone').val("");
+            });
+
+            //Merge button from Merge modal
+            $('#btnSave').on('click', function (e) {
+                var v1 = $('#nbid1').val();
+                var v2 = $('#nbid2').val();
+
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("Merge", "Home")',
+                    cache: false,
+                    data: {id1 : v1, id2 : v2},
+                    success: function (data) {
+                        $('#mergeModal').modal('hide');
+                        alert("MERGE SUCCESS");
+                    },
+                    error: function () {
+                        alert("MERGE FAILED, PLEASE CONTACT IT");
+                    }
+                    })
+            });
+        });
+
+        //on click Merge
+        @*$(document).on('click', '#btnMerge', function (e) {
+            e.preventDefault();
+
+            var v1 = $('input[type="checkbox"]:checked')
+
+            if (v1.length > 1) {
+                $('#loadingGIF').show();
+                var v1_string = [];
+                v1.each(function () {
+                    v1_string.push($(this).val());
+                });
+
+                if (confirm('Confirm to merge ' + v1_string)) {
+                    $.ajax({
+                        url: '@Url.Action("Merge", "Home")',
+                        type: "GET",
+                        cache: false,
+                        data: { Selected_MCB: v1_string },
+                        success: function (data) {
+                            alert("Completed!");
+                            $('#searchResultsArea').hide();
+                            $('#loadingGIF').hide();
+                            $('#resultsArea').hide();
+                        }
+                    });
+                }
+                else { $('#loadingGIF').hide(); };
+            }
+            else {
+                alert("Please select 2 or more NBID's to MERGE");
+            };
+        });*@
+
+        //on click query row to find results
+        $(document).on('click', '#Results', function(){
+
+
+            $('#resultsArea').hide();
+            $('#loadingGIF').show();
+
+            var v1 = $(this).closest('tr').find('td:nth-child(1)').text();
+            //alert(v1);
+
+            $.ajax({
+                url: '@Url.Action("Results", "Home")',
+                type: "GET",
+                cache: false,
+                data: { queryID: v1 },
+                success: function (data) {
+                    //alert("success");
+                    $('#searchResultsArea').show();
+                    $('#resultsArea').show();
+                    $('#loadingGIF').hide();
+                    $('#resultsArea').html(data);
+                }
+            });
+        });
+
+        //hightlight selected row
+        $(document).on('click', 'a', function () {
+            $(this).closest('tr').css('background-color', 'lightblue');
+        });
+    </script>
+}

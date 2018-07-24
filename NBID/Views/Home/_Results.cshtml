@@ -1,0 +1,356 @@
+﻿@model NBID.Models.HomeViewModels
+
+
+<div style="border: solid; margin-top: 5px">
+    @Html.HiddenFor(m => m.queryID)
+    <h2 style="text-align:center">NBID:**@Model.queryID**</h2>
+    <!--------------------------------------------Notes-------------------------------------------->
+    <button id="btnAddNote" class="btn btn-sm btn-primary"
+            onclick="window.open('@Url.Action("AddNotes", "Home", new { @queryID = @Model.queryID})',
+                                                                        '_blank', 'width=850,height=500,top=20,right=50')">
+        ADD NOTE
+    </button>
+    <table class="table table-condensed table-bordered table-hover">
+        <thead style="font-size:medium">
+            <tr style="background-color:#428bca; color:white">
+                <th>NOTE</th>
+                <th>COMMENT</th>
+                <th>CREATED BY</th>
+                <th>CREATED ON</th>
+                <th style="text-align:center">ICON</th>
+            </tr>
+        </thead>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.notesList)
+            {
+                @Html.HiddenFor(m => item.note_id);
+                @Html.HiddenFor(m => item.nbid, new { Value = Model.queryID });
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("EditNotes", "Home", new { @id = item.note_id})',
+                                                                                            '_blank', 'width=850,height=500,top=20,right=50' )">@item.subject</a>
+                                                                                        </td>
+                                                                                        <td>@item.comment</td>
+                                                                                        <td>@item.user_id</td>
+                                                                                        <td>@item.date_time</td>
+                                                                                        <td style="text-align:center">
+                                                                                            <img src="~/Content/Icons/@item.icon" />
+                                                                                        </td>
+                                                                                    </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------HEADER-------------------------------------------->
+    <table class="table table-condensed table-bordered">
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <thead style="font-size:medium">
+            <tr style="background-color:grey; color: white">
+                <th>ACCOUNT #</th>
+                <th>STATUS</th>
+                <th>NAME</th>
+                <th>BILLING ADDRESS</th>
+                <th>SERVICE ADDRESS</th>
+                <th>PHONE</th>
+                <th>BALANCE</th>
+            </tr>
+        </thead>
+    </table>
+    @if (User.IsInRole("ADMIN") | User.IsInRole("NBID(RW)"))
+    {
+        <button id="btnUncluster" class="btn btn-sm"
+                onclick="window.open('@Url.Action("_Uncluster", "Home", new { @queryID = @Model.queryID})', '_blank', 'width=1250,height=750,top=20,right=50')">
+            UNCLUSTER
+        </button>
+    }
+
+    <!--------------------------------------------UTILITY BILLING-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            Utility Billing (Munis)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @for (int i = 0; i < Model.UB_Munis_List.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = Model.UB_Munis_List[i].cust_ser, @Dmode = "UB_MUNIS" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@Model.UB_Munis_List[i].AccountNo</a>
+                                                                            </td>
+                                                                            <td>@Model.UB_Munis_List[i].Status</td>
+                                                                            <td>@Model.UB_Munis_List[i].Name</td>
+                                                                            <td>@Model.UB_Munis_List[i].Billing_Address</td>
+                                                                            <td>@Model.UB_Munis_List[i].Service_Address</td>
+                                                                            <td>@Model.UB_Munis_List[i].Phone</td>
+                                                                            <td>@Model.UB_Munis_List[i].Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------ACIS - Municipal Services (Historical)-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            Utility Billing (Community Plus)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @for (int i = 0; i < Model.UB_ComPlus_List.Count; i++)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = @Model.UB_ComPlus_List[i].AccountNo, @detailsID_2 = @Model.UB_ComPlus_List[i].cust_ser, @Dmode = "ACIS_Historical" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@Model.UB_ComPlus_List[i].AccountNo&nbsp;@Model.UB_ComPlus_List[i].cust_ser</a>
+                                                                            </td>
+                                                                            <td>@Model.UB_ComPlus_List[i].Status</td>
+                                                                            <td>@Model.UB_ComPlus_List[i].Name</td>
+                                                                            <td>@Model.UB_ComPlus_List[i].Billing_Address</td>
+                                                                            <td>@Model.UB_ComPlus_List[i].Service_Address</td>
+                                                                            <td>@Model.UB_ComPlus_List[i].Phone</td>
+                                                                            <td>@Model.UB_ComPlus_List[i].Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------MUNIS VENDORS-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            AP Vendors (Munis)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.APVendors_Munis_List)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = @item.AccountNo, @Dmode = "Vendors_MUNIS" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@item.AccountNo</a>
+                                                                            </td>
+                                                                            <td>@item.Status</td>
+                                                                            <td>@item.Name</td>
+                                                                            <td>@item.Billing_Address</td>
+                                                                            <td>@item.Service_Address</td>
+                                                                            <td>@item.Phone</td>
+                                                                            <td>@item.Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------Accounts Payable - Vendors-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            AP Vendors (Finance Plus)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.APVendors_FinPlus_List)
+            {
+                <tr>
+                    <td>@item.AccountNo &nbsp; @item.cust_ser</td>
+                    <td>@item.Status</td>
+                    <td>@item.Name</td>
+                    <td>@item.Billing_Address</td>
+                    <td>@item.Service_Address</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Balance</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------ALARM BILLING-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            Alarm Billing (Community Plus)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.Alarm_Billing_ComPlus_List)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = @item.AccountNo, @Dmode = "Alarm_Billing" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@item.AccountNo&nbsp;@item.cust_ser</a>
+                                                                            </td>
+                                                                            <td>@item.Status</td>
+                                                                            <td>@item.Name</td>
+                                                                            <td>@item.Billing_Address</td>
+                                                                            <td>@item.Service_Address</td>
+                                                                            <td>@item.Phone</td>
+                                                                            <td>@item.Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------BUSINESS LICENSE-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            Business License (Community Plus)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.BL_ComPlus_List)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = @item.AccountNo, @Dmode = "Business_License" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@item.AccountNo&nbsp;@item.cust_ser</a>
+                                                                            </td>
+                                                                            <td>@item.Status</td>
+                                                                            <td>@item.Name</td>
+                                                                            <td>@item.Billing_Address</td>
+                                                                            <td>@item.Service_Address</td>
+                                                                            <td>@item.Phone</td>
+                                                                            <td>@item.Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------Turbo Citations-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            Turbo Citations (Turbo)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.Turbo_Citations_List)
+            {
+                <tr>
+                    <td>@item.AccountNo&nbsp;@item.cust_ser</td>
+                    <td>@item.Status</td>
+                    <td>@item.Name</td>
+                    <td>@item.Billing_Address</td>
+                    <td>@item.Service_Address</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Balance</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------LEADS-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            LEADS (Permits Plus)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.LEADS_PermPlus_List)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = @item.AccountNo, @Dmode = "LEADS" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@item.AccountNo&nbsp;@item.cust_ser</a>
+                                                                            </td>
+                                                                            <td>@item.Status</td>
+                                                                            <td>@item.Name</td>
+                                                                            <td>@item.Billing_Address</td>
+                                                                            <td>@item.Service_Address</td>
+                                                                            <td>@item.Phone</td>
+                                                                            <td>@item.Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+    <!--------------------------------------------GENERAL BILLING-------------------------------------------->
+    <table class="table table-condensed table-bordered table-hover">
+        <caption>
+            General Billing (Munis)
+        </caption>
+        <colgroup>
+            <col style="width:10%" />
+            <col style="width:10%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:20%" />
+            <col style="width:10%" />
+            <col style="width:10%" />
+        </colgroup>
+        <tbody style="font-size:smaller">
+            @foreach (var item in Model.GB_Munis_List)
+            {
+                <tr>
+                    <td>
+                        <a href="#" onclick="window.open('@Url.Action("Details", "Home", new { @detailsID_1 = @item.AccountNo, @Dmode = "GB_MUNIS" })',
+                                                                                '_blank', 'width=500,height=850,top=20,right=50')">@item.AccountNo</a>
+                                                                            </td>
+                                                                            <td>@item.Status</td>
+                                                                            <td>@item.Name</td>
+                                                                            <td>@item.Billing_Address</td>
+                                                                            <td>@item.Service_Address</td>
+                                                                            <td>@item.Phone</td>
+                                                                            <td>@item.Balance</td>
+                                                                        </tr>
+            }
+        </tbody>
+    </table>
+</div>

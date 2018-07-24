@@ -1,0 +1,164 @@
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\obj\Debug\NBID.csprojResolveAssemblyReference.cache
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\ApplicationInsights.config
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\csc.exe
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\System.Collections.Immutable.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\vbc.exe
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\VBCSCompiler.exe
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\roslyn\VBCSCompiler.exe.config
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\NBID.dll.config
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\NBID.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\NBID.pdb
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Antlr3.Runtime.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\EntityFramework.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\EntityFramework.SqlServer.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.Web.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.WindowsServer.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.ApplicationInsights.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AspNet.Identity.Core.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AspNet.Identity.Owin.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Cookies.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Facebook.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Google.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.OAuth.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Twitter.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Web.Infrastructure.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Newtonsoft.Json.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Owin.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Helpers.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Mvc.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Optimization.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Razor.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.WebPages.Deployment.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.WebPages.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.WebPages.Razor.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\WebGrease.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.Web.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AI.WindowsServer.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.ApplicationInsights.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Helpers.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Mvc.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Optimization.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.Razor.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.WebPages.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.WebPages.Deployment.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\System.Web.WebPages.Razor.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Antlr3.Runtime.pdb
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Newtonsoft.Json.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\EntityFramework.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\EntityFramework.SqlServer.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AspNet.Identity.Core.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AspNet.Identity.Owin.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Facebook.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Cookies.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.OAuth.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Google.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.Twitter.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\obj\Debug\NBID.dll
+c:\users\ttran\documents\visual studio 2015\Projects\NBID\NBID\obj\Debug\NBID.pdb
+Z:\Production\NBID\NBID\bin\ApplicationInsights.config
+Z:\Production\NBID\NBID\bin\roslyn\csc.exe
+Z:\Production\NBID\NBID\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+Z:\Production\NBID\NBID\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+Z:\Production\NBID\NBID\bin\roslyn\Microsoft.CodeAnalysis.dll
+Z:\Production\NBID\NBID\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+Z:\Production\NBID\NBID\bin\roslyn\Microsoft.CSharp.Core.targets
+Z:\Production\NBID\NBID\bin\roslyn\Microsoft.VisualBasic.Core.targets
+Z:\Production\NBID\NBID\bin\roslyn\System.Collections.Immutable.dll
+Z:\Production\NBID\NBID\bin\roslyn\System.Reflection.Metadata.dll
+Z:\Production\NBID\NBID\bin\roslyn\vbc.exe
+Z:\Production\NBID\NBID\bin\roslyn\VBCSCompiler.exe
+Z:\Production\NBID\NBID\bin\roslyn\VBCSCompiler.exe.config
+Z:\Production\NBID\NBID\bin\NBID.dll.config
+Z:\Production\NBID\NBID\bin\NBID.dll
+Z:\Production\NBID\NBID\bin\NBID.pdb
+Z:\Production\NBID\NBID\bin\Antlr3.Runtime.dll
+Z:\Production\NBID\NBID\bin\EntityFramework.dll
+Z:\Production\NBID\NBID\bin\EntityFramework.SqlServer.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.Agent.Intercept.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.DependencyCollector.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.PerfCounterCollector.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.ServerTelemetryChannel.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.Web.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.WindowsServer.dll
+Z:\Production\NBID\NBID\bin\Microsoft.ApplicationInsights.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AspNet.Identity.Core.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AspNet.Identity.Owin.dll
+Z:\Production\NBID\NBID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Host.SystemWeb.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Cookies.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Facebook.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Google.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.OAuth.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Twitter.dll
+Z:\Production\NBID\NBID\bin\Microsoft.Web.Infrastructure.dll
+Z:\Production\NBID\NBID\bin\Newtonsoft.Json.dll
+Z:\Production\NBID\NBID\bin\Owin.dll
+Z:\Production\NBID\NBID\bin\System.Web.Helpers.dll
+Z:\Production\NBID\NBID\bin\System.Web.Mvc.dll
+Z:\Production\NBID\NBID\bin\System.Web.Optimization.dll
+Z:\Production\NBID\NBID\bin\System.Web.Razor.dll
+Z:\Production\NBID\NBID\bin\System.Web.WebPages.Deployment.dll
+Z:\Production\NBID\NBID\bin\System.Web.WebPages.dll
+Z:\Production\NBID\NBID\bin\System.Web.WebPages.Razor.dll
+Z:\Production\NBID\NBID\bin\WebGrease.dll
+Z:\Production\NBID\NBID\bin\Microsoft.AI.DependencyCollector.xml
+Z:\Production\NBID\NBID\bin\Microsoft.AI.ServerTelemetryChannel.xml
+Z:\Production\NBID\NBID\bin\Microsoft.AI.Web.xml
+Z:\Production\NBID\NBID\bin\Microsoft.AI.WindowsServer.xml
+Z:\Production\NBID\NBID\bin\Microsoft.ApplicationInsights.xml
+Z:\Production\NBID\NBID\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+Z:\Production\NBID\NBID\bin\System.Web.Helpers.xml
+Z:\Production\NBID\NBID\bin\System.Web.Mvc.xml
+Z:\Production\NBID\NBID\bin\System.Web.Optimization.xml
+Z:\Production\NBID\NBID\bin\System.Web.Razor.xml
+Z:\Production\NBID\NBID\bin\System.Web.WebPages.xml
+Z:\Production\NBID\NBID\bin\System.Web.WebPages.Deployment.xml
+Z:\Production\NBID\NBID\bin\System.Web.WebPages.Razor.xml
+Z:\Production\NBID\NBID\bin\Antlr3.Runtime.pdb
+Z:\Production\NBID\NBID\bin\Newtonsoft.Json.xml
+Z:\Production\NBID\NBID\bin\EntityFramework.xml
+Z:\Production\NBID\NBID\bin\EntityFramework.SqlServer.xml
+Z:\Production\NBID\NBID\bin\Microsoft.AspNet.Identity.Core.xml
+Z:\Production\NBID\NBID\bin\Microsoft.AspNet.Identity.Owin.xml
+Z:\Production\NBID\NBID\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Host.SystemWeb.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Facebook.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Cookies.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.OAuth.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Google.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.Twitter.xml
+Z:\Production\NBID\NBID\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+Z:\Production\NBID\NBID\obj\Debug\NBID.csprojResolveAssemblyReference.cache
+Z:\Production\NBID\NBID\obj\Debug\NBID.dll
+Z:\Production\NBID\NBID\obj\Debug\NBID.pdb

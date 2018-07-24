@@ -1,0 +1,145 @@
+﻿@model NBID.Models.HomeViewModels
+
+@Styles.Render("~/Content/css")
+@Scripts.Render("~/bundles/modernizr")
+
+
+@{
+    ViewBag.Title = "Uncluster";
+}
+
+@if (ViewBag.success)
+{
+    <div class="alert alert-success">
+        Success!
+    </div>
+}
+
+@using (Html.BeginForm())
+{
+    if (!ViewBag.success)
+    {
+        <div style="margin:5%; border:solid">
+            @Html.HiddenFor(m => m.queryID)
+            <div class="panel panel-primary">
+                <div class="panel-heading">UNCLUSTER</div>
+            </div>
+            <div class="panel-body">
+                <h4>UB (Munis)</h4>
+                @for (int i = 0; i < Model.UB_Munis_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.UB_Munis_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.UB_Munis_List[i].AccountNo ||
+                        @Model.UB_Munis_List[i].Name ||
+                        @Model.UB_Munis_List[i].Billing_Address ||
+                        @Model.UB_Munis_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>UB (Complus)</h4>
+                @for (int i = 0; i < Model.UB_ComPlus_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.UB_ComPlus_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.UB_ComPlus_List[i].AccountNo -
+                        @Model.UB_ComPlus_List[i].cust_ser ||
+                        @Model.UB_ComPlus_List[i].Name ||
+                        @Model.UB_ComPlus_List[i].Billing_Address ||
+                        @Model.UB_ComPlus_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>AP Vendors (Munis)</h4>
+                @for (int i = 0; i < Model.APVendors_Munis_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.APVendors_Munis_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.APVendors_Munis_List[i].AccountNo ||
+                        @Model.APVendors_Munis_List[i].Name ||
+                        @Model.APVendors_Munis_List[i].Billing_Address ||
+                        @Model.APVendors_Munis_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>Vendors (Finplus)</h4>
+                @for (int i = 0; i < Model.APVendors_Munis_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.APVendors_FinPlus_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.APVendors_FinPlus_List[i].AccountNo ||
+                        @Model.APVendors_FinPlus_List[i].Name ||
+                        @Model.APVendors_FinPlus_List[i].Billing_Address ||
+                        @Model.APVendors_FinPlus_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>Alarm Billing (Complus)</h4>
+                @for (int i = 0; i < Model.Alarm_Billing_ComPlus_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.Alarm_Billing_ComPlus_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.Alarm_Billing_ComPlus_List[i].AccountNo ||
+                        @Model.Alarm_Billing_ComPlus_List[i].Name ||
+                        @Model.Alarm_Billing_ComPlus_List[i].Billing_Address ||
+                        @Model.Alarm_Billing_ComPlus_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>Business License (ComPlus)</h4>
+                @for (int i = 0; i < Model.BL_ComPlus_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.BL_ComPlus_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.BL_ComPlus_List[i].AccountNo ||
+                        @Model.BL_ComPlus_List[i].Name ||
+                        @Model.BL_ComPlus_List[i].Billing_Address ||
+                        @Model.BL_ComPlus_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>TURBO CITATIONS (Turbo)</h4>
+                @for (int i = 0; i < Model.Turbo_Citations_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.Turbo_Citations_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.Turbo_Citations_List[i].AccountNo ||
+                        @Model.Turbo_Citations_List[i].Name ||
+                        @Model.Turbo_Citations_List[i].Billing_Address ||
+                        @Model.Turbo_Citations_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>LEADS (PermPlus)</h4>
+                @for (int i = 0; i < Model.LEADS_PermPlus_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.LEADS_PermPlus_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.LEADS_PermPlus_List[i].AccountNo ||
+                        @Model.LEADS_PermPlus_List[i].Name ||
+                        @Model.LEADS_PermPlus_List[i].Billing_Address ||
+                        @Model.LEADS_PermPlus_List[i].Service_Address ||
+                    </div>
+                }
+                <h4>General Billing (Munis)</h4>
+                @for (int i = 0; i < Model.GB_Munis_List.Count; i++)
+                {
+                    <div class="row">
+                        @Html.CheckBoxFor(m => m.GB_Munis_List[i].isChecked, new { style = "width:20px;height:20px" })
+                        @Model.GB_Munis_List[i].AccountNo ||
+                        @Model.GB_Munis_List[i].Name ||
+                        @Model.GB_Munis_List[i].Billing_Address ||
+                        @Model.GB_Munis_List[i].Service_Address ||
+                    </div>
+                }
+            </div>
+            <div class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-12" style="font:larger">
+                        <div class="pull-right">
+                            <button class="btn btn-primary">
+                                <i class="glyphicon glyphicon-move"></i> UNCLUSTER
+                            </button> from NBID: @Model.queryID to @Html.TextBoxFor(m => m.newQueryID)
+                            @Html.ValidationMessageFor(m => m.newQueryID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+}
+
